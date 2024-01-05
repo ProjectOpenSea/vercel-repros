@@ -1,7 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
-  return NextResponse.rewrite(new URL(`/x${request.nextUrl.search}`, request.url));
+  return NextResponse.rewrite(
+    new URL(
+      `/x${request.nextUrl.pathname}${request.nextUrl.search}`,
+      request.url
+    )
+  );
 }
 
 export const config = {
