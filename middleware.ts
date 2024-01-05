@@ -2,12 +2,9 @@ import { NextResponse, type NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
   const persona = "x";
-  return NextResponse.rewrite(
-    new URL(
-      `/${persona}/en${request.nextUrl.pathname}${request.nextUrl.search}`,
-      request.url
-    )
-  );
+  const locale = 'en'
+  const rewritten = `/${locale}/${persona}${request.nextUrl.pathname}${request.nextUrl.search}`;
+  return NextResponse.rewrite(new URL(rewritten, request.url));
 }
 
 export const config = {
