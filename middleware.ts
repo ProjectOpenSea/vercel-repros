@@ -4,7 +4,7 @@ export default function middleware(request: NextRequest) {
   const persona = "x";
   return NextResponse.rewrite(
     new URL(
-      `/${persona}${request.nextUrl.pathname}${request.nextUrl.search}`,
+      `/${persona}/en${request.nextUrl.pathname}${request.nextUrl.search}`,
       request.url
     )
   );

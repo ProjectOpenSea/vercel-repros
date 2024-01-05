@@ -2,17 +2,19 @@ type RootLayoutProps = {
   children: React.ReactNode;
   params: {
     persona: string;
+    locale: string
   };
 };
 
 export default async function RootLayout({
   children,
-  params: { persona },
+  params: { locale, persona },
 }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <div>{persona}</div>
+        <div>Locale: {locale}</div>
+        <div>Persona: {persona}</div>
         <div>{children}</div>
       </body>
     </html>
