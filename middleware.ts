@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 export default function middleware(request: NextRequest) {
   const persona = "x";
   const locale = 'en'
-  request.nextUrl.pathname = `/${locale}${persona}${request.nextUrl.pathname}`
+  request.nextUrl.pathname = `/${locale}/${persona}${request.nextUrl.pathname}`
   return NextResponse.rewrite(request.nextUrl);
 }
 
