@@ -1,7 +1,9 @@
+import { cookies } from "next/headers";
+
 export default function ParameterPage({
   params: { parameter },
 }: {
   params: { parameter: string };
 }) {
-  return <div>Parameter: {parameter}</div>;
+  return <div>{JSON.stringify(cookies)}</div>;
 }
