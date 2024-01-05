@@ -2,7 +2,7 @@ type RootLayoutProps = {
   children: React.ReactNode;
   params: {
     persona: string;
-    locale: string
+    locale: string;
   };
 };
 
@@ -22,5 +22,5 @@ export default async function RootLayout({
 }
 
 export function generateStaticParams() {
-  return [{ persona: "x" }];
+  return [{ persona: "x" }, { persona: "y" }];
 }

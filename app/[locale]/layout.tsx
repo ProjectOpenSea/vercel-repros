@@ -9,5 +9,5 @@ export default function Layout({ children }: Props) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: "en" }];
+  return [{ locale: "en" }, { locale: "fr" }];
 }

@@ -4,6 +4,7 @@ export default function middleware(request: NextRequest) {
   const persona = "x";
   const locale = 'en'
   const rewritten = `/${locale}/${persona}${request.nextUrl.pathname}${request.nextUrl.search}`;
+  console.log("hello", rewritten)
   return NextResponse.rewrite(new URL(rewritten, request.url));
 }
 
