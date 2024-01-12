@@ -4,10 +4,12 @@ type RootLayoutProps = {
     persona: string;
     locale: string;
   };
+  authModal?: React.ReactNode
 };
 
 export default async function RootLayout({
   children,
+  authModal,
   params: { locale, persona },
 }: RootLayoutProps) {
   return (
@@ -16,6 +18,7 @@ export default async function RootLayout({
         <div>Locale: {locale}</div>
         <div>Persona: {persona}</div>
         <div>{children}</div>
+        <div>@authModal: {authModal}</div>
       </body>
     </html>
   );
