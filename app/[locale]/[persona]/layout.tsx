@@ -4,7 +4,7 @@ type RootLayoutProps = {
     persona: string;
     locale: string;
   };
-  authModal?: React.ReactNode
+  authModal: React.ReactNode
 };
 
 export default async function RootLayout({
