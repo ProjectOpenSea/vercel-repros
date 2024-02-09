@@ -1,3 +1,5 @@
+import { Checkbox } from "@opensea/ui-kit/client";
+
 export default function HomePage() {
-  return <div>Hello world</div>;
+  return <Checkbox />
 }
