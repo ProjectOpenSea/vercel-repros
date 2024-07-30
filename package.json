@@ -10,8 +10,10 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@opensea/ui-kit": "^0.2.83",
-    "next": "14.1.0",
+    "@opensea/ui-kit": "0.3.36",
+    "@vercel/otel": "^1.9.1",
+    "date-fns": "^3.6.0",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
