@@ -1,17 +1,25 @@
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     persona: string;
     locale: string;
-  };
+  }>;
   authModal: React.ReactNode
 };
 
-export default async function RootLayout({
-  children,
-  authModal,
-  params: { locale, persona },
-}: RootLayoutProps) {
+export default async function RootLayout(props: RootLayoutProps) {
+  const params = await props.params;
+
+  const {
+    locale,
+    persona
+  } = params;
+
+  const {
+    children,
+    authModal
+  } = props;
+
   return (
     <html lang={locale}>
       <body>

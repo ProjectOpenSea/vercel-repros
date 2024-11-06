@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
 
-export default function ParameterPage() {
-  return <div>Cookies: {JSON.stringify(cookies())}</div>;
+export default async function ParameterPage() {
+  return <div>Cookies: {JSON.stringify(await cookies())}</div>;
 }

@@ -1,5 +1,5 @@
 import { headers } from "next/headers"
 
-export default function Page() {
-  return <div id="headers">{JSON.stringify(headers())}</div>
+export default async function Page() {
+  return <div id="headers">{JSON.stringify(await headers())}</div>;
 }
