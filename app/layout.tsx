@@ -7,9 +7,11 @@ type Props = {
 
 export default function Layout({ children, takeoverModal }: Props) {
   return (
-    <>
-      {children}
-      {takeoverModal}
-    </>
+    <html lang="en">
+      <body>
+        {children}
+        {takeoverModal}
+      </body>
+    </html>
   );
 }
