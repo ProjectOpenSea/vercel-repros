@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
+  console.log(request.nextUrl.pathname)
   const persona = "x";
   const locale = "en";
   let pathname = request.nextUrl.pathname;

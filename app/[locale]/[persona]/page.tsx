@@ -1,5 +1,5 @@
-import { Checkbox } from "@opensea/ui-kit";
+import { Text } from "@opensea/ui-kit";
 
 export default function HomePage() {
-  return <Checkbox />
+  return <Text>Hello</Text>
 }
