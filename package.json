@@ -13,7 +13,7 @@
     "@opensea/ui-kit": "1.0.69",
     "@vercel/otel": "1.9.1",
     "date-fns": "3.6.0",
-    "next": "15.1.6",
+    "next": "15.4.8",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
